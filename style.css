@@ -5,6 +5,7 @@
     --color-blanc: #FFF;
     --color-texte: #b4bcd0;
     --color-background: #060606;
+    --color-background2: #1C1D1F;
     --color-container: hsl(228, 15%, 15%);
     --color-header: #1b1d24;
     --color-primary: #5e6ad2;
@@ -56,7 +57,7 @@ header {
     overflow: hidden;
     color: var(--color-blanc);
     z-index: 999;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(35px);
     border-bottom: 1.5px solid #11121c;
 }
 
@@ -115,7 +116,9 @@ header a.title {
 }
 
 section#home,
-section#expo {
+section#expo,
+section#personnel,
+section#avis {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -201,8 +204,8 @@ section#home .btn {
 }
 
 .ads p i {
-    font-size: 1.3em;
-    color: var(--color-primary);
+    font-size: 1.4em;
+    color: #C73A55;
     margin-right: 20px;
 }
 
@@ -225,6 +228,10 @@ section#home .btn {
     font-weight: 600;
 }
 
+.ads a:hover {
+    color: var(--color-blanc);
+}
+
 .ads a i {
     font-size: 1.2em;
     margin-left: 10px;
@@ -232,25 +239,24 @@ section#home .btn {
 
 section#expo {
     flex-direction: row;
+    justify-content: space-between;
     padding-left: 10%;
+    background-color: var(--color-background2);
 }
 
 section#expo h1 {
     color: var(--color-blanc);
     font-size: 44px;
     font-weight: 900;
-    width: 50vw;
-    text-align: left;
-    line-height: 60px;
+    line-height: 55px;
 }
 
 section#expo p.desc {
     color: var(--color-texte);
-    font-size: 22px;
+    font-size: 20px;
     line-height: 28px;
     font-weight: 500;
-    text-align: left;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 section#expo p.desc span {
@@ -264,9 +270,114 @@ section#expo p.desc span {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    margin-right: 10%;
+    width: calc(100vw - 52vw - 10% - 10%);
 }
 
 section#expo .rectangle {
-    height: 700px;
+    height: 70vh;
+    min-height: 500px;
     width: 52vw;
+    background: rgb(183, 134, 160);
+    background: radial-gradient(circle, rgba(183, 134, 160, 1) 6%, rgba(128, 123, 195, 1) 12%, rgba(100, 118, 212, 1) 16%,
+            rgba(80, 123, 236, 1) 18%, rgba(63, 146, 231, 1) 26%, rgba(78, 129, 209, 1) 48%, rgba(113, 90, 155, 1) 56%, rgba(192, 50, 106, 1) 71%,
+            rgba(187, 77, 102, 1) 80%, rgba(237, 113, 92, 1) 90%, rgba(227, 144, 130, 1) 100%);
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    position: relative;
+    backdrop-filter: blur(20px);
+}
+
+section#expo .rectangle::before {
+    content: '';
+    position: absolute;
+    height: 62vh;
+    width: 47vw;
+    bottom: 0;
+    right: 0;
+    /* background-image: url(); */
+    background: var(--color-blanc);
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+
+section#personnel h1 {
+    color: var(--color-blanc);
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 65px;
+    margin-bottom: 40px;
+}
+
+section#personnel .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 24px;
+    justify-items: center;
+    align-items: center;
+    margin-inline: 10%;
+}
+
+section#personnel .grid .item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 18vw;
+}
+
+section#personnel .grid .item h3 {
+    color: #d0d6e0;
+    font-size: 17px;
+    line-height: 23px;
+    letter-spacing: -.16px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+section#personnel .grid .item p {
+    color: #8a8f98;
+    font-size: 17px;
+    line-height: 23px;
+    letter-spacing: -.16px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+section#avis {
+    background-color: var(--color-background2);
+}
+
+section#avis h1 {
+    color: var(--color-blanc);
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 65px;
+    margin-bottom: 40px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#avis .card {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background-color: #28292C;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .2);
+    padding: 15px;
+    margin: 10px;
+    color: #B4B8BF;
+}
+
+section#avis .card img {
+    border-radius: 50%;
+    width: 77px;
+    height: 45px;
+    object-fit: cover;
+    margin-right: 15px;
 }
