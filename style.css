@@ -362,6 +362,10 @@ section#avis h1 {
     justify-content: center;
 }
 
+.row.col-avis {
+    align-items: start;
+}
+
 section#avis .card {
     display: flex;
     align-items: start;
@@ -369,15 +373,53 @@ section#avis .card {
     background-color: #28292C;
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, .2);
-    padding: 15px;
+    padding: 20px;
     margin: 10px;
-    color: #B4B8BF;
+    color: var(--color-blanc);
 }
 
 section#avis .card img {
     border-radius: 50%;
-    width: 77px;
-    height: 45px;
+    width: 103px;
+    height: 43px;
     object-fit: cover;
     margin-right: 15px;
+}
+
+section#avis .card .column .row {
+    margin-bottom: 5px;
+}
+
+section#avis .card p.nom {
+    font-size: 1.1em;
+    text-transform: capitalize;
+}
+
+section#avis .card p.aro {
+    margin-left: 5px;
+}
+
+section#avis .card p.aro,
+section#avis .card p.date {
+    color: #B4B8BF;
+    font-size: 1em;
+}
+
+section#avis .card i {
+    color: #B4B8BF;
+    font-size: 4px;
+    margin-inline: 5px;
+    position: relative;
+    top: 1.5px;
+}
+
+section#avis .card p.message {
+    line-height: 25px;
+    color: #C4C8D0;
+    font-weight: 400;
+}
+
+section#avis .card p.message span {
+    color: var(--color-primary);
+    font-weight: 500;
 }
