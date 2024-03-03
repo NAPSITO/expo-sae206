@@ -118,7 +118,8 @@ header a.title {
 section#home,
 section#expo,
 section#personnel,
-section#avis {
+section#avis,
+section#faq {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -376,7 +377,7 @@ section#avis .card {
     align-items: start;
     justify-content: center;
     background-color: #28292C;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, .2);
     padding: 20px;
     margin: 12px 15px;
@@ -384,7 +385,7 @@ section#avis .card {
     width: 25vw;
 }
 
-section#avis .card .pp {
+section .pp {
     width: 90px;
     height: 40px;
     overflow: hidden;
@@ -393,7 +394,7 @@ section#avis .card .pp {
     margin-right: 15px;
 }
 
-section#avis .card .pp img {
+section .pp img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -438,4 +439,70 @@ section#avis .card p.message {
 section#avis .card p.message span {
     color: var(--color-primary);
     font-weight: 500;
+}
+
+section#faq h1 {
+    color: var(--color-blanc);
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 65px;
+    margin-bottom: 40px;
+}
+
+section#faq .question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50vw;
+    height: 60px;
+    cursor: pointer;
+    background-color: var(--color-background);
+    transition: background .25s ease-in-out;
+    border-radius: 10px;
+    padding: 0 15px;
+    position: relative;
+}
+
+section#faq .question::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 15px;
+    width: calc(100% - 15px - 10px);
+    height: 1.1px;
+    background-color: var(--color-background2);
+    z-index: 2;
+}
+
+section#faq .question:last-child::before {
+    content: '';
+    visibility: hidden;
+}
+
+section#faq .question:hover {
+    background-color: var(--color-background2);
+}
+
+section#faq .question p {
+    font-size: 14px;
+    line-height: 19px;
+    color: #8a8f98;
+    font-weight: 400;
+}
+
+section#faq .question p.title {
+    font-weight: 500;
+    color: var(--color-blanc);
+    width: 50%;
+}
+
+section#faq .question p.subject,
+section#faq .question p.date {
+    width: 13%;
+}
+
+section#faq .question .pp {
+    width: 30px;
+    height: 30px;
+    margin: 0;
 }
