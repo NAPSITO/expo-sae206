@@ -506,3 +506,13 @@ section#faq .question .pp {
     height: 30px;
     margin: 0;
 }
+
+section#faq .btn {
+    margin-top: 30px;
+    background: linear-gradient(90deg, #C73A55, #952C72);
+}
+
+section#faq .btn:hover {
+    color: var(--color-blanc);
+    background: linear-gradient(90deg, #972c3f, #611c4a);
+}
