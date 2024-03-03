@@ -692,17 +692,19 @@ section#billeterie .billet_type h2 {
     color: var(--color-blanc);
     font-size: 1em;
     font-weight: 500;
-    margin-block: 10px;
 }
 
 section#billeterie .billet_type p {
     color: #A7A9BE;
     font-size: 1em;
     font-weight: 400;
+    margin-block: 15px;
 }
 
 section#billeterie .billet_type p:last-child {
-    margin-top: 10px;
+    margin-top: auto;
     color: var(--color-primary);
     font-weight: 600;
+    height: 45px;
+    margin-bottom: 0;
 }
