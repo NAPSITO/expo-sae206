@@ -12,6 +12,12 @@
     --color-primary-hover: #2d389b;
 }
 
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-blanc);
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -119,7 +125,8 @@ section#home,
 section#expo,
 section#personnel,
 section#avis,
-section#faq {
+section#faq,
+section#contact {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -474,7 +481,7 @@ section#faq .question::before {
     z-index: 2;
 }
 
-section#faq .question:last-child::before {
+section#faq .question:nth-last-child(2)::before {
     content: '';
     visibility: hidden;
 }
@@ -508,11 +515,133 @@ section#faq .question .pp {
 }
 
 section#faq .btn {
-    margin-top: 30px;
+    margin-top: 50px;
     background: linear-gradient(90deg, #C73A55, #952C72);
 }
 
 section#faq .btn:hover {
     color: var(--color-blanc);
     background: linear-gradient(90deg, #972c3f, #611c4a);
+}
+
+section#contact {
+    flex-direction: row;
+}
+
+section#contact .row {
+    align-items: start;
+    width: 55vw;
+    justify-content: space-between;
+}
+
+section#contact h1 {
+    color: var(--color-blanc);
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: -.6px;
+    white-space: nowrap;
+}
+
+section#contact form {
+    background-color: var(--color-background2);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    border: #3c3c3c 1px solid;
+    width: 45%;
+}
+
+section#contact form .top {
+    padding: 18px 24px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-bottom: #3c3c3c 1px solid;
+    width: 100%;
+}
+
+section#contact form .top h2 {
+    color: var(--color-blanc);
+    font-size: 14px;
+    line-height: 21px;
+    text-align: left;
+    font-weight: 600;
+}
+
+section#contact form .content {
+    color: var(--color-texte);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    padding: 24px;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    width: 100%;
+}
+
+section#contact form .content label {
+    font-size: 13px;
+    line-height: 21px;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+section#contact form .content input,
+section#contact form .content textarea {
+    font-size: 13px;
+    margin-bottom: 24px;
+    background: none;
+    border: 1px solid #3c3c3c;
+    outline: none;
+    width: 100%;
+    color: var(--color-blanc);
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 400;
+}
+
+section#contact form .content input:focus,
+section#contact form .content textarea:focus {
+    border: 1px solid var(--color-primary);
+}
+
+section#contact form .content .row {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section#contact form .content .row p {
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--color-texte);
+    font-weight: 400;
+}
+
+section#contact form .content .row a {
+    color: var(--color-texte);
+    font-weight: 400;
+}
+
+section#contact form .content .row a:hover {
+    color: var(--color-blanc);
+    font-weight: 400;
+}
+
+section#contact form .content input.btn {
+    padding: 7px 15px;
+    border-radius: 60px;
+    color: var(--color-blanc);
+    width: auto;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+section#contact form .content input.btn:hover {
+    background-color: #ffffff10;
 }
