@@ -364,6 +364,11 @@ section#avis h1 {
 
 .row.col-avis {
     align-items: start;
+    justify-content: center;
+}
+
+.column {
+    margin: 0;
 }
 
 section#avis .card {
@@ -374,16 +379,24 @@ section#avis .card {
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, .2);
     padding: 20px;
-    margin: 10px;
+    margin: 12px 15px;
     color: var(--color-blanc);
+    width: 25vw;
 }
 
-section#avis .card img {
-    border-radius: 50%;
-    width: 103px;
-    height: 43px;
-    object-fit: cover;
+section#avis .card .pp {
+    width: 90px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50px;
+    box-sizing: border-box;
     margin-right: 15px;
+}
+
+section#avis .card .pp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 section#avis .card .column .row {
@@ -391,8 +404,9 @@ section#avis .card .column .row {
 }
 
 section#avis .card p.nom {
-    font-size: 1.1em;
+    font-size: 1em;
     text-transform: capitalize;
+    white-space: nowrap;
 }
 
 section#avis .card p.aro {
@@ -402,7 +416,8 @@ section#avis .card p.aro {
 section#avis .card p.aro,
 section#avis .card p.date {
     color: #B4B8BF;
-    font-size: 1em;
+    font-size: .95em;
+    white-space: nowrap;
 }
 
 section#avis .card i {
@@ -417,6 +432,7 @@ section#avis .card p.message {
     line-height: 25px;
     color: #C4C8D0;
     font-weight: 400;
+    font-size: .9em;
 }
 
 section#avis .card p.message span {
