@@ -759,6 +759,10 @@ section#billeterie .billet_type p:last-child {
     font-weight: 600;
     height: 45px;
     margin-bottom: 0;
+    background: -webkit-linear-gradient(0deg, #C73A55, #952C72);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px #ffffff1a;
 }
 
 @media (max-height: 1000px) {
