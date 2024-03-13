@@ -780,7 +780,8 @@ section#billeterie .billet_type p:last-child {
         min-height: 1000px;
     }
 
-    section#faq {
+    section#faq,
+    section#contact {
         min-height: 800px;
     }
 }
