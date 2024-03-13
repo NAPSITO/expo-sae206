@@ -784,7 +784,8 @@ section#billeterie .billet_type p:last-child {
     }
 
     section#contact {
-        min-height: 700px;
+        min-height: 635px;
+        padding-top: 35px;
     }
 }
 
