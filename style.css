@@ -579,7 +579,7 @@ section#faq .btn:hover {
 
 section#contact {
     flex-direction: row;
-    min-height: 670px;
+    /* min-height: 670px; */
 }
 
 section#contact .row {
@@ -774,7 +774,8 @@ section#billeterie .billet_type p:last-child {
 
     section#avis,
     section#faq,
-    section#billeterie {
+    section#billeterie,
+    section#contact {
         height: auto;
         min-height: 1000px;
     }
