@@ -702,7 +702,7 @@ section#contact form .content input.btn:hover {
 }
 
 section#billeterie {
-    background-color: var(--color-background2);
+    background-color: var(--color-background2); 
 }
 
 section#billeterie h1 {
@@ -773,8 +773,7 @@ section#billeterie .billet_type p:last-child {
 @media (max-height: 1000px) {
 
     section#avis,
-    section#faq,
-    section#billeterie {
+    section#faq {
         height: auto;
         min-height: 1000px;
     }
@@ -786,6 +785,13 @@ section#billeterie .billet_type p:last-child {
     section#contact {
         min-height: 635px;
         padding-top: 35px;
+    }
+
+    section#billeterie {
+        height: auto;
+        min-height: 100vh;
+        padding-block: 100px 50px;
+        /* min-height: 1000px; */
     }
 }
 
