@@ -766,6 +766,7 @@ section#billeterie .billet_type p:last-child {
     line-height: 1.1;
     background: -webkit-linear-gradient(0deg, #C73A55, #952C72);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 10px #ffffff1a;
 }
@@ -783,8 +784,10 @@ section#billeterie .billet_type p:last-child {
     }
 
     section#contact {
-        min-height: 635px;
+        height: auto;
+        min-height: 100vh;
         padding-top: 35px;
+        align-items: start;
     }
 
     section#billeterie {
@@ -1130,6 +1133,10 @@ section#billeterie .billet_type p:last-child {
 
     .btn i {
         font-size: .9em;
+    }
+
+    section#contact {
+        padding-block: 100px 40px;
     }
 
     section#contact .row {
