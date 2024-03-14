@@ -41,6 +41,23 @@ html {
     font-family: 'Inter';
 }
 
+body::-webkit-scrollbar {
+    width: .6em;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-blanc);
+    border-radius: 25px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-primary);
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--color-background);
+}
+
 body {
     min-height: 100vh;
     overflow-y: auto;
